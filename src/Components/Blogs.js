@@ -31,7 +31,7 @@ const Blogs = () => {
         {blogs?.map((blog) => (
           <Link to={"/blogs/" + blog._id} onClick={topFunction}>
             <div className="h-80 w-64 m-8 flex rounded shadow-lg bg-white hover:shadow-2xl  bg-primary bg-[url('https://1.bp.blogspot.com/-kK7Fxm7U9o0/YN0bSIwSLvI/AAAAAAAACFk/aF4EI7XU_ashruTzTIpifBfNzb4thUivACLcBGAsYHQ/s1280/222.jpg')] bg-cover bg-center  transition-shadow duration-400 ease-in-out">
-              <div className="sbg flex items-end h-80 w-64 rounded bg-[url('file:///Users/rajnish/Downloads/output-onlinepngtools.png')] bg-cover bg-center">
+              <div className="sbg flex items-end h-80 w-64 rounded  bg-cover bg-center">
                 <div className="text-white pb-4 px-4 font-bold">
                   {blog.title}
                 </div>
