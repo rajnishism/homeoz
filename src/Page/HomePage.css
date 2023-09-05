@@ -1,0 +1,18 @@
+.hero {
+  width: 98vw;
+}
+
+.heroText-head {
+  line-height: 1.4em;
+  font-weight: 700;
+  font-size: 50px;
+}
+.hero-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  vertical-align: middle;
+  height: 100%;
+}
