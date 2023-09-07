@@ -44,5 +44,5 @@
   "devDependencies": {
     "tailwindcss": "^3.3.2"
   },
-  "proxy": "https://homeozfrontend.vercel.app/"
+  "proxy": "https://homeoz-server.vercel.app/"
 }
