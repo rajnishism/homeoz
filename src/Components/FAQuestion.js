@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 const FAQuestion = () => {
   const [faqs, setFaqs] = useState([]);
   useEffect(() => {
-    fetch("contents/faq")
+    fetch("https://homeoz-server.vercel.app/contents/faq")
       .then((response) => response.json())
       .then((faqs) => {
         setFaqs(faqs);

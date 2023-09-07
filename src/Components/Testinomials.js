@@ -6,7 +6,7 @@ const Testinomials = () => {
   const [cnt, setCnt] = useState(0);
 
   useEffect(() => {
-    fetch("contents/testinomials")
+    fetch("https://homeoz-server.vercel.app/contents/testinomials")
       .then((response) => response.json())
       .then((testinomial) => {
         if (testinomial.length) {

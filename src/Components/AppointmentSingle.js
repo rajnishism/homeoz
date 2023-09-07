@@ -7,7 +7,7 @@ const AppointmentSingle = () => {
   const { userId } = useParams();
   const [appointment, setAppointment] = useState([]);
   useEffect(() => {
-    const url = "/appointment/" + userId;
+    const url = "https://homeoz-server.vercel.app/appointment/" + userId;
     console.log(url);
     fetch(url)
       .then((response) => response.json())
