@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 const Specialization = () => {
   const [diseases, setDiseases] = useState([]);
   useEffect(() => {
-    fetch("contents/diseases")
+    fetch("https://homeoz-server.vercel.app/contents/diseases")
       .then((response) => response.json())
       .then((diseases) => {
         setDiseases(diseases);

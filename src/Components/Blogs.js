@@ -8,7 +8,7 @@ const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch("/blogs/")
+    fetch("https://homeoz-server.vercel.app/blogs/")
       .then((response) => response.json())
       .then((data) => {
         setBlogs(data);
