@@ -9,7 +9,7 @@ const Contact = () => {
 
   const [contacts, setContacts] = useState([]);
   useEffect(() => {
-    fetch("../contents/contacts")
+    fetch("https://homeoz-server.vercel.app/contents/contacts")
       .then((response) => response.json())
       .then((contacts) => {
         setContacts(contacts);
