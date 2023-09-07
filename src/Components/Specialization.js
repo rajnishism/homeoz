@@ -1,10 +1,10 @@
 import React from "react";
 import { useState, useEffect } from "react";
-
+import base from "../url";
 const Specialization = () => {
   const [diseases, setDiseases] = useState([]);
   useEffect(() => {
-    fetch("https://homeoz-server.vercel.app/contents/diseases")
+    fetch(`${base}/contents/diseases`)
       .then((response) => response.json())
       .then((diseases) => {
         setDiseases(diseases);

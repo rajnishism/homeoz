@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import base from "../url"
 const Contact = () => {
   const contactDetails = {
     phone: "+91123456789",
@@ -9,7 +9,7 @@ const Contact = () => {
 
   const [contacts, setContacts] = useState([]);
   useEffect(() => {
-    fetch("https://homeoz-server.vercel.app/contents/contacts")
+    fetch(`${base}/contents/contacts`)
       .then((response) => response.json())
       .then((contacts) => {
         setContacts(contacts);

@@ -1,12 +1,12 @@
 import React from "react";
 import { useState, useEffect } from "react";
-
+import base from "../url";
 const Testinomials = () => {
   const [testinomials, setTestinomials] = useState([]);
   const [cnt, setCnt] = useState(0);
 
   useEffect(() => {
-    fetch("https://homeoz-server.vercel.app/contents/testinomials")
+    fetch(`${base}/contents/testinomials`)
       .then((response) => response.json())
       .then((testinomial) => {
         if (testinomial.length) {

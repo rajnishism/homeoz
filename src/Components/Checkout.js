@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import { useNavigate } from "react-router-dom";
-
+import base from "../url"
 const Checkout = () => {
   // const navigate = useNavigate();
   // const {data}=props;
@@ -20,7 +20,7 @@ const Checkout = () => {
   // console.log("Mila",data.name);
   // console.log("Fronted Data",data);
   const handleSubmit = async (e) => {
-    const res = await fetch("https://homeoz-server.vercel.app/pay/create-order", {
+    const res = await fetch(`${base}/pay/create-order`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -43,7 +43,7 @@ const Checkout = () => {
       description: "Appointment Booking",
       image: "https://example.com/your_logo",
       order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-      callback_url: `https://homeoz-server.vercel.app/pay/verify-payment/${aid}.${fee}`,
+      callback_url: `${base}/pay/verify-payment/${aid}.${fee}`,
       prefill: {
         name: data.name,
         email: data.email,

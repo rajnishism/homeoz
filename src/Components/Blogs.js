@@ -2,13 +2,14 @@ import React from "react";
 import "./Blog.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import base from "../url";
 
 const myComponentStyle = {};
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch("https://homeoz-server.vercel.app/blogs/")
+    fetch(`${base}/blogs/`)
       .then((response) => response.json())
       .then((data) => {
         setBlogs(data);

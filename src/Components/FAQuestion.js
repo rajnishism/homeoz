@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-
+import base from "../url";
 const FAQuestion = () => {
   const [faqs, setFaqs] = useState([]);
   useEffect(() => {
-    fetch("https://homeoz-server.vercel.app/contents/faq")
+    fetch(`${base}/contents/faq`)
       .then((response) => response.json())
       .then((faqs) => {
         setFaqs(faqs);

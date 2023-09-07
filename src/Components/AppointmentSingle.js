@@ -2,12 +2,12 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Dashboard from "../Page/Dashboard";
-
+import base from "../url";
 const AppointmentSingle = () => {
   const { userId } = useParams();
   const [appointment, setAppointment] = useState([]);
   useEffect(() => {
-    const url = "https://homeoz-server.vercel.app/appointment/" + userId;
+    const url = `${base}/appointment/` + userId;
     console.log(url);
     fetch(url)
       .then((response) => response.json())
