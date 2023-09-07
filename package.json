@@ -44,5 +44,5 @@
   "devDependencies": {
     "tailwindcss": "^3.3.2"
   },
-  "proxy": "http://localhost:4100/"
+  "proxy": "https://homeozfrontend.vercel.app/"
 }
