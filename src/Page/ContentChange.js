@@ -1,14 +1,14 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import base from "../url";
 const ContentChange = () => {
   const [diseases, setDiseases] = useState([]);
   const [testinomials, setTestinomials] = useState([]);
   const [contacts, setContacts] = useState([]);
 
   useEffect(() => {
-    fetch("../contents/contacts")
+    fetch(`${base}/contents/contacts`)
       .then((response) => response.json())
       .then((contacts) => {
         setContacts(contacts);
@@ -16,7 +16,7 @@ const ContentChange = () => {
   }, []);
 
   useEffect(() => {
-    fetch("../contents/diseases")
+    fetch(`${base}/contents/diseases`)
       .then((response) => response.json())
       .then((diseases) => {
         setDiseases(diseases);
@@ -24,7 +24,7 @@ const ContentChange = () => {
   }, [diseases]);
 
   useEffect(() => {
-    fetch("../contents/testinomials")
+    fetch(`${base}/contents/testinomials`)
       .then((response) => response.json())
       .then((testinomial) => {
         setTestinomials(testinomial);
@@ -34,7 +34,7 @@ const ContentChange = () => {
 
   const [faqs, setFaqs] = useState([]);
   useEffect(() => {
-    fetch("../contents/faq")
+    fetch(`${base}/contents/faq`)
       .then((response) => response.json())
       .then((faqs) => {
         setFaqs(faqs);
@@ -54,7 +54,7 @@ const ContentChange = () => {
       }),
     };
     console.log(id);
-    const url = "../contents/disease/" + id;
+    const url = `${base}/contents/disease/` + id;
     fetch(url, requestOptions)
       .then((response) => response.json())
       .then((data) => this.setState({ postId: data.id }));
@@ -72,7 +72,7 @@ const ContentChange = () => {
       }),
     };
 
-    const url = "../contents/contacts/" + contactId;
+    const url = `${base}/contents/contacts/` + contactId;
     fetch(url, requestOptions)
       .then((response) => response.json())
       .then((data) => this.setState({ postId: data.id }));
@@ -80,7 +80,7 @@ const ContentChange = () => {
   };
   const deleteDisease = (event, disease) => {
     const id = disease._id;
-    const url = "../contents/diseases/" + id;
+    const url = `${base}/contents/diseases/` + id;
     console.log(url);
     fetch(url, { method: "DELETE" }).then(() => console.log("done"));
   };
@@ -113,7 +113,7 @@ const ContentChange = () => {
   };
 
   const deleteTestinomial = (event, testinomialId) => {
-    const url = "../contents/testinomials/" + testinomialId;
+    const url = `${base}/contents/testinomials/` + testinomialId;
     console.log(url);
     fetch(url, { method: "DELETE" }).then(() => console.log("done"));
     window.location.reload(false);
@@ -136,7 +136,7 @@ const ContentChange = () => {
       }),
     };
 
-    const url = "../contents/faq/" + faqId;
+    const url = `${base}/contents/faq/` + faqId;
     fetch(url, requestOptions)
       .then((response) => response.json())
       .then((data) => this.setState({ postId: data.id }));
@@ -144,7 +144,7 @@ const ContentChange = () => {
   };
 
   const deleteFaq = (event, faqId) => {
-    const url = "../contents/faq/" + faqId;
+    const url = `${base}/contents/faq/` + faqId;
     console.log(url);
     fetch(url, { method: "DELETE" }).then(() => console.log("done"));
   };
@@ -155,7 +155,7 @@ const ContentChange = () => {
       alert("Please fill the disease name field");
     } else {
       console.log(diseaseName);
-      const url = "../contents/diseases/";
+      const url = `${base}/contents/diseases/`;
       console.log(url);
       const requestOptions = {
         method: "POST",
@@ -182,7 +182,7 @@ const ContentChange = () => {
     } else {
       console.log(newTestinomial);
       console.log(newTestinomialPerson);
-      const url = "../contents/testinomials/";
+      const url = `${base}/contents/testinomials/`;
       console.log(url);
       const requestOptions = {
         method: "POST",
@@ -210,7 +210,7 @@ const ContentChange = () => {
     } else {
       console.log(newQuestion);
       console.log(newAnswer);
-      const url = "../contents/faq/";
+      const url = `${base}/contents/faq/`;
       console.log(url);
       const requestOptions = {
         method: "POST",

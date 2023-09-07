@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-
+import base from "../url"
 const Appointment = () => {
   const [appointments, setAppointments] = useState([]);
   const [paid, setPaid]= useState([]);
@@ -10,7 +10,7 @@ const Appointment = () => {
   const [revisit, setRevisit]= useState([]);
 
   useEffect(() => {
-    fetch("../appointment")
+    fetch(`${base}/appointment`)
       .then((response) => response.json())
       .then((appointment) => {
         setAppointments(appointment);
@@ -29,7 +29,7 @@ const Appointment = () => {
       });
   };
   const showPaidAppointments = () => {
-    fetch("../paidappointment")
+    fetch(`${base}/paidappointment`)
       .then((response) => response.json())
       .then((appointment) => {
         setAppointments(appointment);
@@ -38,7 +38,7 @@ const Appointment = () => {
   };
 
   const showPendingMedication = () => {
-    fetch("../pendingMedication")
+    fetch(`${base}/pendingMedication`)
       .then((response) => response.json())
       .then((appointment) => {
         setAppointments(appointment);
@@ -47,7 +47,7 @@ const Appointment = () => {
   };
 
   const showPendingConsultation = () => {
-    fetch("../pendingConsultation")
+    fetch(`${base}/pendingConsultation`)
       .then((response) => response.json())
       .then((appointment) => {
         setAppointments(appointment);
@@ -56,7 +56,7 @@ const Appointment = () => {
   };
 
   const showRevisit = (req, res) => {
-    fetch("../revisit")
+    fetch(`${base}/revisit`)
       .then((response) => response.json())
       .then((appointment) => {
         setAppointments(appointment);

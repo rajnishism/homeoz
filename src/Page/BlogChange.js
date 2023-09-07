@@ -3,14 +3,14 @@ import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Parser } from "html-to-react";
 import JoditEditor from "jodit-react";
-
+import base from "../url";
 const BlogChange = () => {
   const editor = useRef(null);
   const [content, setContent] = useState("");
   const [blogs, setBlogs] = useState([]);
   const [showModal, setShowModal] = useState(false);
   useEffect(() => {
-    fetch("../blogs")
+    fetch(`${base}/blogs`)
       .then((response) => response.json())
       .then((data) => {
         setBlogs(data);
@@ -23,7 +23,7 @@ const BlogChange = () => {
   const updateblogs = () => {};
   const deleteblogs = (event, blogId) => {
     const id = blogId;
-    const url = "../blogs/" + id;
+    const url = `${base}/blogs/` + id;
     console.log(url);
     fetch(url, { method: "DELETE" }).then(() => console.log("done"));
   };
@@ -43,7 +43,7 @@ const BlogChange = () => {
     } else if (!newImg) {
       alert("image is missing ");
     } else {
-      const url = "../blogs";
+      const url = `${base}/blogs`;
       const today = new Date();
       const yyyy = today.getFullYear();
       let mm = today.getMonth() + 1; // Months start at 0!
