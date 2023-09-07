@@ -2,13 +2,13 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Parser } from "html-to-react";
-
+import base from "../url"
 const BlogSingle = (props) => {
   const { id } = useParams();
   console.log(id);
   const [blog, setBlog] = useState({});
   useEffect(() => {
-    const url = "../blogs/" + id;
+    const url = `${base}/blogs/` + id;
     console.log(url);
     fetch(url)
       .then((response) => response.json())
@@ -32,7 +32,7 @@ const BlogSingle = (props) => {
     if (name && email && comment) {
       const id = blogId;
       console.log(id);
-      const url = "../blogs/" + id + "/comments";
+      const url = `${base}/blogs/` + id + "/comments";
       const requestOptions = {
         method: "POST",
         headers: { "Content-Type": "application/json" },
