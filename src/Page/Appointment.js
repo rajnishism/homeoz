@@ -21,7 +21,7 @@ const Appointment = () => {
     const btn = (document.getElementById(
       "showAllAppointment"
     ).style.backgroundColor = "#ffeaea");
-    fetch("../appointment")
+    fetch(`${base}/appointment`)
       .then((response) => response.json())
       .then((appointment) => {
         setAppointments(appointment);
