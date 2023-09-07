@@ -192,7 +192,7 @@ const PopUp = () => {
                 backgroundColor: "beige",
               }}
             >
-              Book
+              Continue
             </button>
           </div>
         </div>
