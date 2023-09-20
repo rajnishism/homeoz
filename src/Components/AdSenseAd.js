@@ -11,7 +11,7 @@ function AdSenseAd() {
 
     script.onload = () => {
       (window.adsbygoogle = window.adsbygoogle || []).push({
-        ad_client: "your-ad-client-id",
+        ad_client: "ca-pub-5979920370722473",
         enable_page_level_ads: true,
       });
     };
