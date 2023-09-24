@@ -11,7 +11,7 @@ const FAQuestion = () => {
   }, [faqs]);
 
   return (
-    <div>
+    <div className="mb-10">
       <div>
         <div className="text-center mt-10">
           <p className="text-primary font-medium">Frequently Asked Qusetions</p>

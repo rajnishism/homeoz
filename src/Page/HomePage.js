@@ -14,6 +14,7 @@ import { useState } from "react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import Button from "../Components/Button";
+import ConsultancySection from "../Components/ConsultancySection";
 // import
 const HomePage = () => {
   const [hidden, setHide] = useState(true);
@@ -35,6 +36,7 @@ const HomePage = () => {
           <Blogs />
           <Testinomials />
           <Contact />
+          <ConsultancySection />
           <div
             className="flex justify-center py-10 bg-primary "
             onClick={handleClick}
