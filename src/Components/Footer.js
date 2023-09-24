@@ -12,19 +12,37 @@ const Footer = () => {
     <div className="bg-gray-800 py-10 flex flex-col justify-center ">
       <div className=" inline-flex items-center justify-center flex-col ">
         <div className="  flex items-center bg-white p-4  rounded-md ">
-          <img src="/images/logo.png" className="w-20 inline-block"></img>
-          <h2 className=" text-3xl  font-semibold pr-4 ">Homeoz</h2>
+          <img src="/images/logo.png" className="w-16 inline-block"></img>
+          <h2 className=" text-2xl  font-semibold pr-4 ">Homeoz</h2>
+        </div>
+        <div className="mt-4">
+          <ul className="flex items-center flex-col lg:flex-row text-white">
+            <li className="mx-4   lg:w-28 text-center font-sans hover:underline ">
+              Home{" "}
+            </li>
+            <li className="mx-4  lg:w-28 text-center font-sans hover:underline">
+              Blogs
+            </li>
+            <li className="mx-4  lg:w-28 text-center font-sans hover:underline">
+              Book Appointment
+            </li>
+            <li className="mx-4  lg:w-28 text-center font-sans hover:underline">
+              Track Appointment
+            </li>
+            <li className="mx-4  lg:w-28 text-center font-sans hover:underline">
+              Admin Login
+            </li>
+          </ul>
         </div>
 
-        <div className="text-white mt-10">Follow us here </div>
         <div className=" flex mt-4">
           <div>
             {socialHandle.fb.length > 0 && (
               <a href={socialHandle.fb}>
-                <div className="w-16 h-16 bg-white rounded-full m-2 flex justify-center items-center drop-shadow-xl shadow-white">
+                <div className="w-10 h-10 bg-white rounded-full m-2 flex justify-center items-center drop-shadow-xl shadow-white">
                   <img
                     src="/images/fb.png"
-                    className="w-10  drop-shadow-lg"
+                    className="w-8  drop-shadow-lg"
                   ></img>
                 </div>
               </a>
@@ -34,10 +52,10 @@ const Footer = () => {
           <div>
             {socialHandle.twitter.length > 0 && (
               <a href={socialHandle.twitter}>
-                <div className="w-16 h-16 bg-white rounded-full m-2 flex justify-center items-center drop-shadow-lg shadow-white">
+                <div className="w-10 h-10 bg-white rounded-full m-2 flex justify-center items-center drop-shadow-lg shadow-white">
                   <img
                     src="/images/twitter.png"
-                    className="w-10 drop-shadow-lg"
+                    className="w-8 drop-shadow-lg"
                   ></img>
                 </div>
               </a>
@@ -58,10 +76,10 @@ const Footer = () => {
           </div>
 
           <a href={socialHandle.instgram}>
-            <div className="w-16 h-16 bg-white rounded-full m-2 flex justify-center items-center drop-shadow-lg shadow-white">
+            <div className="w-10 h-10 bg-white rounded-full m-2 flex justify-center items-center drop-shadow-lg shadow-white">
               <img
                 src="/images/instagram.png"
-                className="w-10 drop-shadow-lg"
+                className="w-7 drop-shadow-lg"
               ></img>
             </div>
           </a>

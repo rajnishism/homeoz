@@ -11,6 +11,9 @@ import Contact from "../Components/Contact";
 // import { Link } from "react-router-dom";
 import PopUp from "../Components/PopUp";
 import { useState } from "react";
+import Header from "../Components/Header";
+import Footer from "../Components/Footer";
+import Button from "../Components/Button";
 // import
 const HomePage = () => {
   const [hidden, setHide] = useState(true);
@@ -23,6 +26,7 @@ const HomePage = () => {
     <>
       {hidden ? (
         <>
+          <Header />
           <Hero />
           <Benefits />
           <Steps />
@@ -31,14 +35,13 @@ const HomePage = () => {
           <Blogs />
           <Testinomials />
           <Contact />
-          <div className="flex justify-center py-10 bg-primary ">
-            <button
-              className="p-4 text-sm boundary bg-white rounded-sm mt-4 bg-white drop-shadow-2xl  font-semibold"
-              onClick={handleClick}
-            >
-              Book Your Appointment Now
-            </button>
+          <div
+            className="flex justify-center py-10 bg-primary "
+            onClick={handleClick}
+          >
+            <Button text="Book" />
           </div>
+          <Footer />
         </>
       ) : (
         <>

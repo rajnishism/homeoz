@@ -1,10 +1,11 @@
 import React from "react";
-
 import Contact from "../Components/Contact";
+import Header from "../Components/Header";
 const ContactUs = () => {
   return (
     <div>
-      <div className="mt-36">
+      <Header />
+      <div className="">
         <Contact />
       </div>
     </div>

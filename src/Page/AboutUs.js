@@ -6,8 +6,8 @@ const AboutUs = () => {
   return (
     <>
       <Header />
-      <div className="mt-20">
-        <div className="py-12">
+      <div className="">
+        <div className="">
           <div>
             <div className="text-center ">
               <p className="text-primary font-medium">About us</p>

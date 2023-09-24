@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import base from "../url"
+import base from "../url";
 const Contact = () => {
   const contactDetails = {
     phone: "+91123456789",
@@ -18,7 +18,7 @@ const Contact = () => {
 
   return (
     <div>
-      <div className="text-center mt-10">
+      <div className="text-center ">
         <p className="text-primary font-medium">Contact Us</p>
         <p className="font-bold text-xl"> Feel free to Contact us</p>
       </div>

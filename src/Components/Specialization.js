@@ -23,16 +23,14 @@ const Specialization = () => {
           <div className="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 ">
             {diseases.map((disease) => (
               <div className="inline-block px-3">
-                <div className="w-64 h-72 bg-secondary  max-w-xs overflow-hidden rounded shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                <div className="w-64 h-64 bg-secondary  max-w-xs overflow-hidden rounded shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
                   <div className="h-40  w-64 flex justify-center bg-white rounded-b-md p-10 drop-shadow-lg">
                     <img
                       src="/images/headache.png"
                       className="w-20 h-20 "
                     ></img>
                   </div>
-                  <div className="text-center mt-10 p-2 text-bold">
-                    {disease.name}
-                  </div>
+                  <div className="text-center mt-4 p-2 ">{disease.name}</div>
                 </div>
               </div>
             ))}

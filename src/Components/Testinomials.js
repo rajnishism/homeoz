@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import base from "../url";
+import Button from "./Button";
 const Testinomials = () => {
   const [testinomials, setTestinomials] = useState([]);
   const [cnt, setCnt] = useState(0);
@@ -58,10 +59,7 @@ const Testinomials = () => {
         className="flex justify-center pt-10 drop-shadow-lg "
         onClick={handleClick}
       >
-        <button className="p-4 text-sm boundary bg-primary rounded-sm mt-4 text-white font-semibold">
-          {" "}
-          Next Testinomials
-        </button>
+        <Button text="Next" icons="" />
       </div>
     </>
   );

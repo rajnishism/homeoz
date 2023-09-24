@@ -3,6 +3,8 @@ import "./Blog.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import base from "../url";
+import Button from "./Button";
+import Header from "./Header";
 
 const myComponentStyle = {};
 const Blogs = () => {
@@ -24,7 +26,7 @@ const Blogs = () => {
 
   return (
     <div className=" ">
-      <div className="text-center mt-10">
+      <div className="text-center ">
         <p className="text-primary font-medium">Blogs</p>
         <p className="font-bold text-xl"> Get ready for healhy blogs </p>
       </div>
@@ -43,10 +45,7 @@ const Blogs = () => {
       </div>
       <div className="flex justify-center">
         <Link to="/blogs">
-          <button className="p-4 text-sm boundary bg-primary rounded-sm mt-4 text-white font-bold">
-            {" "}
-            See More
-          </button>
+          <Button text=" see more" />
         </Link>
       </div>
     </div>

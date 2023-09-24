@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { Parser } from "html-to-react";
 import base from "../url";
 import AdSenseAd from "./AdSenseAd";
+import Header from "./Header";
 const BlogSingle = (props) => {
   const { id } = useParams();
   console.log(id);
@@ -50,7 +51,8 @@ const BlogSingle = (props) => {
 
   return (
     <>
-      <div className=" mt-20 bg-gray-200">
+      <Header />
+      <div className="  bg-gray-200">
         <div className=" flex flex-col lg:flex-row md:p-10 ">
           <div className="w-full lg:w-2/3   mr-10 mb-10 lg:mb-0 ">
             <div className="bg-white">
