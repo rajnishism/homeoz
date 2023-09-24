@@ -56,7 +56,7 @@ const Testinomials = () => {
       </div>
 
       <div
-        className="flex justify-center pt-10 drop-shadow-lg "
+        className="flex justify-center pt-10 drop-shadow-lg mb-10"
         onClick={handleClick}
       >
         <Button text="Next" icons="" />

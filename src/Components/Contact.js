@@ -22,15 +22,15 @@ const Contact = () => {
         <p className="text-primary font-medium">Contact Us</p>
         <p className="font-bold text-xl"> Feel free to Contact us</p>
       </div>
-      <div className="flex items-center justify-around mt-10">
+      <div className="flex items-center justify-around mt-10 ">
         <div className="flex flex-col  justify-center relative right-10">
-          <div className="flex my-6  ">
+          <div className="flex my-6 ">
             <div className="h-20 w-20 rounded-full bg-primary relative left-16   bottom-0 z-10 drop-shadow-lg  p-4">
               <img src="/images/logo.png"></img>
             </div>
-            <div className="h-20 w-96 bg-white drop-shadow-lg rounded-lg px-20 flex flex-col justify-center ">
-              <div className="text-sm">Call us</div>
-              <div className="text-md">
+            <div className="h-20 w-80 lg:w-96 bg-white drop-shadow-lg rounded-lg px-20 flex flex-col justify-center ">
+              <div className="text-sm font-bold">Call us</div>
+              <div className="text-sm">
                 {contacts.length > 0 && contacts[0].details}
               </div>
             </div>
@@ -41,9 +41,9 @@ const Contact = () => {
             <div className="h-20 w-20 rounded-full bg-primary relative left-16   bottom-0 z-10 drop-shadow-lg  p-4">
               <img src="/images/logo.png"></img>
             </div>
-            <div className="h-20 w-96 bg-white drop-shadow-lg rounded-lg px-20 flex flex-col justify-center ">
-              <div className="text-sm">email us</div>
-              <div className="text-md">
+            <div className="h-20 w-80 lg:w-96 bg-white drop-shadow-lg rounded-lg px-20 flex flex-col justify-center ">
+              <div className="text-sm font-bold">Email us</div>
+              <div className="text-sm">
                 {contacts.length > 0 && contacts[1].details}
               </div>
             </div>
@@ -54,9 +54,9 @@ const Contact = () => {
             <div className="h-20 w-20 rounded-full bg-primary relative left-16   bottom-0 z-10 drop-shadow-lg  p-4">
               <img src="/images/logo.png"></img>
             </div>
-            <div className="h-20 w-96 bg-white drop-shadow-lg rounded-lg px-20 flex flex-col justify-center ">
-              <div className="text-sm">address </div>
-              <div className="text-md">
+            <div className="h-20 w-80 lg:w-96 bg-white drop-shadow-lg rounded-lg px-20 flex flex-col justify-center ">
+              <div className="text-sm font-bold ">Address </div>
+              <div className="text-sm">
                 {contacts.length > 0 && contacts[2].details}
               </div>
             </div>
