@@ -11,7 +11,8 @@ export const PaymentSuccess = () => {
     navigate("/");
   };
   const [counter, setCounter] = useState(10000);
-  setTimeout(sendHome, counter);
+
+  // setTimeout(sendHome, counter);
   // setInterval(()=>{
   //   setCounter(counter-1)
   // },counter)
@@ -22,7 +23,7 @@ export const PaymentSuccess = () => {
   return (
     <>
       <div className="flex flex-col items-center mt-10">
-        <div class="success-animation">
+        <div class="my-6">
           <svg
             class="checkmark"
             xmlns="http://www.w3.org/2000/svg"
@@ -42,17 +43,37 @@ export const PaymentSuccess = () => {
             />
           </svg>
         </div>
-        <h2 className="text-2xl font-bold mb-4">Order Confirmation</h2>
-        <div className="bg-white p-4 rounded-lg shadow-lg w-96">
-          <h3 className="text-lg font-semibold mb-2">Order Details:</h3>
-          <ul></ul>
+        <h2 className="text-2xl font-bold mb-4">Booking Confirmed</h2>
+        <div className="bg-white p-4  shadow-lg w-96 text-center">
+          <table className="table-auto border-none font-sans inline-block">
+            <tr>
+              <td className="border-0 p-2 font-bold  ">Booking Id</td>
+              <td className="border-0 p-2 font-semibold ">123423</td>
+            </tr>
+            <tr>
+              <td className="border-0 p-2">Name</td>
+              <td className="border-0 p-2">Rajnish Kumar</td>
+            </tr>
+            <tr>
+              <td className="border-0 p-2">Phone</td>
+              <td className="border-0 p-2">+91 122922929</td>
+            </tr>
+            <tr>
+              <td className="border-0 p-2">Date</td>
+              <td className="border-0 p-2">10/11/2023</td>
+            </tr>
+          </table>
         </div>
 
         <p className="mt-4">
-          Your order has been confirmed. Thank you for shopping with us!
+          Your order has been confirmed. Thank you for Trusting us!
         </p>
+        <p>You will recieve details on your email and Phone </p>
       </div>
-      <Link to="/">Click here to go Ghar</Link>
+
+      <div className="text-center mt-10">
+        <a href="/">Go Back to home</a>
+      </div>
     </>
   );
 };

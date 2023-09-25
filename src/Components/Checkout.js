@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import { useNavigate } from "react-router-dom";
-import base from "../url"
+import base from "../url";
 const Checkout = () => {
   // const navigate = useNavigate();
   // const {data}=props;
@@ -70,7 +70,7 @@ const Checkout = () => {
 
   return (
     <>
-      <div className="mt-28">
+      {/* <div className="mt-28">
         <div className="flex justify-center font-bold text-3xl">Checkout </div>
         <div className="flex justify-center items-center py-10 w-screen ">
           <div className="lg:w-2/3 w-full py-10  flex  ">
@@ -140,7 +140,7 @@ const Checkout = () => {
                 ></input>
               </div>
               {/* <Button text="Book " /> */}
-              <button
+      {/* <button
                 onClick={handleSubmit}
                 style={{
                   border: "2px solid black",
@@ -150,6 +150,49 @@ const Checkout = () => {
               >
                 Proceed To Pay
               </button>
+            </div>
+          </div>
+        </div> */}
+      {/* </div> */}
+
+      {/* my code */}
+
+      <div className="bg-gray-100 h-screen">
+        <div className="w-96  mx-auto   z-20  drop-shadow-xl font-sans pt-10">
+          <div className="bg-primary items-center -z-10 rounded-t-sm p-2 flex">
+            <img
+              src="/images/logo.png"
+              className="w-16 bg-white rounded-full m-2 drop-shadow-lg"
+            ></img>
+            <div>
+              <h1 className="text-2xl font-bold   ">Homeoz Healthcare</h1>
+              <p className="text-sm text-gray-700"> Raja Garden ,Ludhiana</p>
+            </div>
+          </div>
+          <div className="p-10 text-gray-600 bg-white rounded-b-sm ">
+            <p className="font-semibold underline underline-offset-4 ">
+              Confirm Details
+            </p>
+            <br></br>
+            <div> Name: Rajnsh kumar</div>
+            <hr className="border-dashed my-2"></hr>
+            <div> Name: Rajnsh kumar</div>
+            <hr className="border-dashed my-2"></hr>
+            <div> Name: Rajnsh kumar</div>
+            <hr className="border-dashed my-2"></hr>
+            <div> Name: Rajnsh kumar</div>
+            <hr className="border-dashed my-2"></hr>
+            <div> Name: Rajnsh kumar</div>
+            <hr className="border-dashed my-2"></hr>
+            <div> Name: Rajnsh kumar</div>
+            <hr className="border-dashed my-2"></hr>
+            <div className="w-full text-center bg-green-600 rounded-sm p-2 text-white hover:bg-green-800  hover:bg-opacity-90  my-4">
+              {" "}
+              Proceed to pay
+            </div>
+            <div className="w-full text-center bg-red-500 rounded-sm p-2 text-white hover:bg-red-800 ">
+              {" "}
+              Go Back
             </div>
           </div>
         </div>

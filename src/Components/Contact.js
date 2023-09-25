@@ -17,8 +17,8 @@ const Contact = () => {
   }, []);
 
   return (
-    <div>
-      <div className="text-center ">
+    <div className="mb-10">
+      <div className="text-center  ">
         <p className="text-primary font-medium">Contact Us</p>
         <p className="font-bold text-xl"> Feel free to Contact us</p>
       </div>
