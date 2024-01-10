@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 // import { useNavigate } from "react-router-dom";
 import base from "../url";
 const Checkout = () => {
@@ -6,7 +7,6 @@ const Checkout = () => {
   // const {data}=props;
   // const [pres,setPres]=useState(true)
   const [fee, setFee] = useState(100000);
-
   const storedUser = localStorage.getItem("data");
   const data = JSON.parse(storedUser);
   // if(data){
@@ -41,7 +41,7 @@ const Checkout = () => {
       currency: "INR",
       name: "Homeoz",
       description: "Appointment Booking",
-      image: "https://example.com/your_logo",
+      image: "/images/logo.png",
       order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
       callback_url: `${base}/pay/verify-payment/${aid}.${fee}`,
       prefill: {
@@ -67,6 +67,9 @@ const Checkout = () => {
   //         console.log("Ni hua");
   //     }
   // },[])
+  const goBack = () => {
+    window.history.back(); // This will navigate back to the previous page
+  };
 
   return (
     <>
@@ -174,26 +177,31 @@ const Checkout = () => {
               Confirm Details
             </p>
             <br></br>
-            <div> Name: Rajnsh kumar</div>
+            <div> Name: {data.name}</div>
             <hr className="border-dashed my-2"></hr>
-            <div> Name: Rajnsh kumar</div>
+            <div> Email: {data.email}</div>
             <hr className="border-dashed my-2"></hr>
-            <div> Name: Rajnsh kumar</div>
+            <div> Phone: {data.phone}</div>
             <hr className="border-dashed my-2"></hr>
-            <div> Name: Rajnsh kumar</div>
+            <div> Symptoms: {data.symptom}</div>
             <hr className="border-dashed my-2"></hr>
-            <div> Name: Rajnsh kumar</div>
+            <div className=" text-black"> Fee: ₹{fee}/</div>
             <hr className="border-dashed my-2"></hr>
-            <div> Name: Rajnsh kumar</div>
-            <hr className="border-dashed my-2"></hr>
-            <div className="w-full text-center bg-green-600 rounded-sm p-2 text-white hover:bg-green-800  hover:bg-opacity-90  my-4">
+
+            <button
+              className="w-full text-center bg-green-600 rounded-sm p-2 text-white hover:bg-green-800  hover:bg-opacity-90  my-4"
+              onClick={handleSubmit}
+            >
               {" "}
               Proceed to pay
-            </div>
-            <div className="w-full text-center bg-red-500 rounded-sm p-2 text-white hover:bg-red-800 ">
+            </button>
+            <button
+              className="w-full text-center bg-red-500 rounded-sm p-2 text-white hover:bg-red-800 "
+              onClick={goBack}
+            >
               {" "}
               Go Back
-            </div>
+            </button>
           </div>
         </div>
       </div>
