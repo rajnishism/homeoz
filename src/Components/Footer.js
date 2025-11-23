@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <div className="bg-gray-800 py-10 flex flex-col justify-center ">
       <div className=" inline-flex items-center justify-center flex-col ">
-        <div className="  flex items-center bg-white p-4  rounded-md ">
+        <div className="  flex items-center bg-white px-2  rounded-md ">
           <img src="/images/logo.png" className="w-16 inline-block"></img>
           <h2 className=" text-2xl  font-semibold pr-4 ">Homeoz</h2>
         </div>
