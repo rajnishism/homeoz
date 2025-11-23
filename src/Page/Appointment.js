@@ -76,9 +76,9 @@ const Appointment = () => {
               {" "}
               <span className="font-bold text-xl"> &larr;</span> 
               <Link to="../">
-              Back to main </Link>
+              Back to main 
+              Website </Link>
   
-              Website
             </h2>
           </div>
 
