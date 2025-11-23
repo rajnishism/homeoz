@@ -36,7 +36,7 @@ const HomePage = () => {
           <Blogs />
           <Testinomials />
           <Contact />
-          <ConsultancySection />
+          
           <div
             className="flex justify-center py-10 bg-primary "
             onClick={handleClick}
