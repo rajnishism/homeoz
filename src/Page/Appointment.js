@@ -74,7 +74,10 @@ const Appointment = () => {
           <div className="flex items-center bg-secondary py-2 px-4 mr-2">
             <h2 className="">
               {" "}
-              <span className="font-bold text-xl"> &larr;</span> Back to main
+              <span className="font-bold text-xl"> &larr;</span> 
+              <Link to="../">
+              Back to main </Link>
+  
               Website
             </h2>
           </div>
