@@ -19,6 +19,7 @@ const BlogSingle = (props) => {
         setBlog(blogDetail);
       });
   }, []);
+  const parsed= Parser().parse(blog.content);
   console.log(blog);
 
   const addComment = (event, blogId) => {
@@ -57,7 +58,7 @@ const BlogSingle = (props) => {
         <div className=" flex flex-col lg:flex-row md:p-10 ">
           <div className="w-full lg:w-2/3   mr-10 mb-10 lg:mb-0 ">
             <div className="bg-white">
-              <img src= {Parser().parse(blog.imgLink)} className="w-full "></img>
+              <img src= {parsed?.imgLink || "images/demo.jpg" } className="w-full "></img>
               <div className="flex w-full justify-between">
                 <div className="time px-10 pt-6"> {blog.date}</div>
 
