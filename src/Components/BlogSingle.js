@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { Parser } from "html-to-react";
 import base from "../url";
 import AdSenseAd from "./AdSenseAd";
+import AdUnit from "./BlogAd.js";
 import Header from "./Header";
 const BlogSingle = (props) => {
   const { id } = useParams();
