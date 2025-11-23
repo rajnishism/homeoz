@@ -20,14 +20,14 @@ const BlogSingle = (props) => {
         setBlog(blogDetail);
       });
   }, []);
-  const parsed= Parser().parse(blog.content);
+  const parsed = Parser().parse(blog.content);
   console.log(blog);
 
   const addComment = (event, blogId) => {
     const name = document.getElementById("newName").value;
     const email = document.getElementById("newEmail").value;
     const comment = document.getElementById("newComment").value;
-    
+
     const newComment = {
       name: name,
       email: email,
@@ -59,7 +59,10 @@ const BlogSingle = (props) => {
         <div className=" flex flex-col lg:flex-row md:p-10 ">
           <div className="w-full lg:w-2/3   mr-10 mb-10 lg:mb-0 ">
             <div className="bg-white">
-              <img src= {parsed?.imgLink || "/images/demo.jpg" } className="w-full "></img>
+              <img
+                src={parsed?.imgLink || "/images/demo.jpg"}
+                className="w-full "
+              ></img>
               <div className="flex w-full justify-between">
                 <div className="time px-10 pt-6"> {blog.date}</div>
 
@@ -168,7 +171,7 @@ const BlogSingle = (props) => {
                 <h1 className="p-10 py-6  text-2xl font-semibold   divide-primary">
                   Advertisement
                 </h1>
-                <AdSenseAd />
+                <AdUnit />
               </div>
             </div>
             <div className="bg-white  mb-10 rounded-sm">
