@@ -46,7 +46,7 @@ const Dropdown = () => {
             Book Appointment
           </a>
           <a
-            href="#"
+            href="/dashboard/appointments"
             className="block px-4 py-2 text-gray-800 hover:bg-secondary  "
           >
             Track Appointment
