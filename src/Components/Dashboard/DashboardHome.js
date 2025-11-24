@@ -237,7 +237,7 @@ export default function MaterialUiDashboard() {
         {/* Top summary cards */}
         <Grid container spacing={2}>
           <Grid item xs={12} md={3}>
-            <Card>
+            <Card className="w-full">
               <CardHeader title="Revenue" subheader="$12,430" />
               <CardContent>
                 <Typography variant="body2" color="text.secondary">
