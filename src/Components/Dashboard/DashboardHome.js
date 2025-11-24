@@ -260,7 +260,7 @@ export default function MaterialUiDashboard() {
             </Card>
           </Grid>
 
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} md={2}>
             <Card>
               <CardHeader title="Active Users" subheader="1,234" />
               <CardContent>
