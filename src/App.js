@@ -65,6 +65,7 @@ import Checkout from "./Components/Checkout";
 import { PaymentSuccess } from "./Components/PaymentSuccess";
 import PaymentFailure from "./Components/PaymentFailure";
 import AppointmentSingle from "./Components/AppointmentSingle";
+import MaterialUiDashboard from "./Components/Dashboard/DashboardHome";
 
 const App = () => {
   return (
@@ -80,6 +81,13 @@ const App = () => {
           <Route exact path="/dashboard/blogs" element={<BlogChange />}></Route>
           <Route exact path="/blogs/:id" element={<BlogSingle />}></Route>
           <Route exact path="/checkout" element={<Checkout />}></Route>
+
+          <Route
+            exact
+            path="/dashboardui"
+            element={<MaterialUiDashboard />}
+          ></Route>
+
           <Route
             exact
             path="/falied-payment"
