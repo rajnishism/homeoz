@@ -236,7 +236,7 @@ export default function MaterialUiDashboard() {
 
         {/* Top summary cards */}
         <Grid container spacing={2}>
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} md={3} className="w-full">
             <Card className="w-full">
               <CardHeader title="Revenue" subheader="$12,430" />
               <CardContent>
@@ -260,7 +260,7 @@ export default function MaterialUiDashboard() {
             </Card>
           </Grid>
 
-          <Grid item xs={12} md={2}>
+          <Grid item xs={12} md={3}>
             <Card>
               <CardHeader title="Active Users" subheader="1,234" />
               <CardContent>
