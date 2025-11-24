@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c1f82b3f.css",
+    "main.js": "/static/js/main.344d31c1.js",
+    "static/media/Montserrat-Black.ttf": "/static/media/Montserrat-Black.08437fd0aa82576d3678.ttf",
+    "index.html": "/index.html",
+    "main.c1f82b3f.css.map": "/static/css/main.c1f82b3f.css.map",
+    "main.344d31c1.js.map": "/static/js/main.344d31c1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c1f82b3f.css",
+    "static/js/main.344d31c1.js"
+  ]
+}
