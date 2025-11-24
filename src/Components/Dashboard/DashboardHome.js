@@ -144,7 +144,7 @@ export default function MaterialUiDashboard() {
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar
-        class="bg-primary"
+        class="primary"
         position="fixed"
         sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
       >
