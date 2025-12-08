@@ -15,7 +15,7 @@ const Testinomials = () => {
       .then((data) => {
         setTestinomials(data|| []);
         setIndex(0);
-        }
+        })
         .catch((err) => console.error("Error Fetching testimonials:", err));
       });
   }, []);
