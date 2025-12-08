@@ -23,7 +23,7 @@ const Blogs = () => {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   }
-  const bgImg = blog?.imgLink ? blog.imgLink : "/images/demo.jpg";
+  var bgImg = blog?.imgLink ? blog.imgLink : "/images/demo.jpg";
   return (
     <div className=" ">
       <div className="text-center ">
