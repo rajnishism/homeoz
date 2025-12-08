@@ -37,7 +37,7 @@ const Blogs = () => {
               backgroundImage: ` url(${blog.imgLink || "/images/demo.jpg"})`
             }}
                 className="h-80 w-64 m-8 flex rounded shadow-lg bg-white hover:shadow-2xl  bg-cover bg-center  transition-shadow duration-400 ease-in-out">
-              <div className="sbg flex items-end h-80 w-64 rounded  bg-cover bg-center">
+              <div className="sbg flex items-end h-80 w-64 rounded  bg-cover bg-center" style="background-image: linear-gradient(0deg, black, transparent);">
                 <div className="text-white pb-4 px-4 font-bold">
                   {blog.title}
                 </div>
