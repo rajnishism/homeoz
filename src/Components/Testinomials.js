@@ -1,31 +1,44 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import base from "../url";
 import Button from "./Button";
+
+import { useState, useEffect } from "react";
+
 const Testinomials = () => {
   const [testinomials, setTestinomials] = useState([]);
-  const [cnt, setCnt] = useState(0);
-
+  const [index, setIndex] = useState(0);
+  
+  //fetch testimonials
   useEffect(() => {
     fetch(`${base}/contents/testinomials`)
       .then((response) => response.json())
-      .then((testinomial) => {
-        if (testinomial.length) {
-          setCnt(testinomial.length);
-          console.log(testinomial.length);
+      .then((data) => {
+        setTestinomials(data|| []);
+        setIndex(0);
         }
-        setTestinomials(testinomial);
-        console.log(testinomial);
+        .catch((err) => console.error("Error Fetching testimonials:", err));
       });
   }, []);
 
+
+//Auto change testimonials every 2 seconds
+useEffect(()=>{
+      if(!testinomials.length) return;
+    
+      const intervalId = setInterval(()=> {
+        setIndex((prev)=> (prev+1)% testinomials.length);
+        }, 2000); // 2 seconds 
+
+      return () => clearInterval(intervalId); // cleanup 
+  }, [testinomials.length]);
+
+
+  // handle manual click
   const handleClick = () => {
-    setCount((count + 1) % cnt);
+    if (!testinomials.length) return;
+    setIndex((prev) => (prev + 1) % testinomials.length);
   };
-  const [count, setCount] = useState(1);
-  useEffect(() => {
-    console.log(count);
-  }, [count]);
+  
 
   return (
     <>
@@ -45,11 +58,13 @@ const Testinomials = () => {
           </div>
 
           {testinomials.length > 0 && (
-            <div className="text-center">
-              <div className="maincontent text-md font-bold  ">
-                {testinomials[count].testinomial}
+            <div className="text-center transition-opacity duration-500">
+              <div className="maincontent text-md font-bold">
+                {testinomials[index].testinomial}
               </div>
-              <div className="subtitle pt-4">{testinomials[count].person}</div>
+              <div className="subtitle pt-4">
+                {testinomials[index].person}
+              </div>
             </div>
           )}
         </div>
