@@ -70,7 +70,7 @@ const BlogChange = () => {
         .then((response) => response.json())
         .then(console.log("done"));
 
-      window.location.reload(false);
+      
     }
   };
   return (
