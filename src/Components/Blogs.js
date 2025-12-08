@@ -35,7 +35,7 @@ const Blogs = () => {
           <Link to={"/blogs/" + blog._id} onClick={topFunction}>
             <div style={{
     backgroundImage: `
-      linear-gradient(0deg,rgba(13, 13, 13, 1) 1%, rgba(179, 179, 179, 0.85) 32%, rgba(255, 255, 255, 0) 100%)
+      
       url(${blog.imgLink || "/images/demo.jpg"})`
   }}
                 className="h-80 w-64 m-8 flex rounded shadow-lg bg-white hover:shadow-2xl  bg-cover bg-center  transition-shadow duration-400 ease-in-out">
