@@ -23,7 +23,7 @@ const Blogs = () => {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   }
-
+  const bgImg = blog?.imgLink ? blog.imgLink : "/images/demo.jpg";
   return (
     <div className=" ">
       <div className="text-center ">
@@ -33,7 +33,7 @@ const Blogs = () => {
       <div className="flex content-center  overflow-x-auto w-full  xl:pl-0 pb-10">
         {blogs?.map((blog) => (
           <Link to={"/blogs/" + blog._id} onClick={topFunction}>
-            <div style={{backgroundImage: `url(${blog.imgLink})`}}className="h-80 w-64 m-8 flex rounded shadow-lg bg-white hover:shadow-2xl  bg-cover bg-center  transition-shadow duration-400 ease-in-out">
+            <div style={{backgroundImage: `url(${bgImg})`}}className="h-80 w-64 m-8 flex rounded shadow-lg bg-white hover:shadow-2xl  bg-cover bg-center  transition-shadow duration-400 ease-in-out">
               <div className="sbg flex items-end h-80 w-64 rounded  bg-cover bg-center">
                 <div className="text-white pb-4 px-4 font-bold">
                   {blog.title}
