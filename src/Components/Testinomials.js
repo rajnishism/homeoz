@@ -17,7 +17,7 @@ const Testinomials = () => {
         setIndex(0);
         })
         .catch((err) => console.error("Error Fetching testimonials:", err));
-      });
+     
   }, []);
 
 
