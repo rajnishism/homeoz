@@ -33,11 +33,11 @@ const Blogs = () => {
       <div className="flex content-center  overflow-x-auto w-full  xl:pl-0 pb-10">
         {blogs?.map((blog) => (
           <Link to={"/blogs/" + blog._id} onClick={topFunction}>
-            <div style={{
-    backgroundImage: `
-      linear-gradient: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.4)),
-      url(${blog.imgLink || "/images/demo.jpg"})`
-  }}
+         <div style={{
+              backgroundImage: `
+                linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.4))
+                url(${blog.imgLink || "/images/demo.jpg"})`
+            }}
                 className="h-80 w-64 m-8 flex rounded shadow-lg bg-white hover:shadow-2xl  bg-cover bg-center  transition-shadow duration-400 ease-in-out">
               <div className="sbg flex items-end h-80 w-64 rounded  bg-cover bg-center">
                 <div className="text-white pb-4 px-4 font-bold">
