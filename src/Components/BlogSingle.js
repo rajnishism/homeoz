@@ -60,7 +60,7 @@ const BlogSingle = (props) => {
           <div className="w-full lg:w-2/3   mr-10 mb-10 lg:mb-0 ">
             <div className="bg-white">
               <img
-                src={parsed?.imgLink || "/images/demo.jpg"}
+                src={blog.imgLink || "/images/demo.jpg"}
                 className="w-full "
               ></img>
               <div className="flex w-full justify-between">
