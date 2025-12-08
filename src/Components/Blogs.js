@@ -23,7 +23,7 @@ const Blogs = () => {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   }
-  var bgImg = blog?.imgLink ? blog.imgLink : "/images/demo.jpg";
+  
   return (
     <div className=" ">
       <div className="text-center ">
@@ -36,7 +36,7 @@ const Blogs = () => {
             <div style={{
     backgroundImage: `
       linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-      url(${bgImg || "/images/demo.jpg"})`
+      url(${blog.imgLink || "/images/demo.jpg"})`
   }}
                 className="h-80 w-64 m-8 flex rounded shadow-lg bg-white hover:shadow-2xl  bg-cover bg-center  transition-shadow duration-400 ease-in-out">
               <div className="sbg flex items-end h-80 w-64 rounded  bg-cover bg-center">
