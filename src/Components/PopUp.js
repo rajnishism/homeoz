@@ -120,7 +120,7 @@ const PopUp = () => {
         Enter Patient Details{" "}
       </div>
       <div className="flex justify-center items-center py-10 w-screen ">
-        <div class="flex  rounded-2xl  lg:w-2/3 w-full py-10   shadow-sm  ">
+        <div class="flex  rounded-2xl  lg:w-2/3 w-full py-10   shadow-xl  ">
           <div className="hidden md:flex w-1/2 items-center px-6  ">
             <img
               src="/images/EnterDetails.gif"
@@ -128,7 +128,7 @@ const PopUp = () => {
               alt="Ni mila😢😢"
             ></img>
           </div>
-          <div className=" w-full md:w-1/2 p-10 border-2 m-4 shadow-xl rounded-xl bg-stone-50">
+          <div className=" w-full md:w-1/2 p-10 border-2 m-4 shadow-sm rounded-xl bg-stone-50">
                <div class="flex items-center justify-between">
                 <div class="text-2xl font-normal">
                 <h1>
