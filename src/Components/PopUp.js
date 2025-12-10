@@ -42,7 +42,7 @@
 //       <div className="flex justify-center items-center py-10 w-screen ">
 //         <div className="lg:w-2/3 w-full py-10  flex  ">
 //           <div className="hidden md:flex w-1/2 items-center ">
-//             <img src="/images/registerbg1.jpg" className=""></img>
+//             <img src="/images/EnterDetails.gif" className=""></img>
 //           </div>
 //           <div className=" w-full md:w-1/2 p-6 ">
 //             <div className="mb-4 w-72">
