@@ -120,7 +120,7 @@ const PopUp = () => {
         Enter Patient Details{" "}
       </div>
       <div className="flex justify-center items-center py-10 w-screen ">
-        <div class="flex  rounded-2xl  lg:w-2/3 w-full py-10   shadow-sm bg-stone-50 ">
+        <div class="flex  rounded-2xl  lg:w-2/3 w-full py-10   shadow-sm  ">
           <div className="hidden md:flex w-1/2 items-center px-6  ">
             <img
               src="/images/EnterDetails.gif"
@@ -128,7 +128,7 @@ const PopUp = () => {
               alt="Ni mila😢😢"
             ></img>
           </div>
-          <div className=" w-full md:w-1/2 p-10 border-2 m-4 shadow-xl rounded-xl">
+          <div className=" w-full md:w-1/2 p-10 border-2 m-4 shadow-xl rounded-xl bg-stone-50">
                <div class="flex items-center justify-between">
                 <div class="text-2xl font-normal">
                 <h1>
@@ -136,10 +136,10 @@ const PopUp = () => {
                 </h1>
               </div>
               <div>
-                <img src="https://homeoz.in/images/logo.png" class="w-20" />
+                <img src="https://homeoz.in/images/logo.png" class="w-16" />
               </div>
             </div>
-            <hr class="my-6 w-full border-(--pattern-fg)" />
+            <hr class="mb-4  w-full border-(--pattern-fg)" />
             <div className="mb-4 w-72">
               <label className=" ">Name</label>
               <input
