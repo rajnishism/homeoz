@@ -123,7 +123,7 @@ const PopUp = () => {
         <div className="lg:w-2/3 w-full py-10  flex  ">
           <div className="hidden md:flex w-1/2 items-center ">
             <img
-              src="/images/registerbg1.jpg"
+              src="/images/EnterDetails.gif"
               className=""
               alt="Ni mila😢😢"
             ></img>
