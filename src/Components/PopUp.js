@@ -128,7 +128,7 @@ const PopUp = () => {
               alt="Ni mila😢😢"
             ></img>
           </div>
-          <div className=" w-full md:w-1/2 p-6 shadow-xl">
+          <div className=" w-full md:w-1/2 p-6 border-2 m-4 shadow-xl rounded-xl">
                <div class="flex items-center justify-between">
                 <div class="text-2xl font-normal">
                 <h1>
@@ -139,6 +139,7 @@ const PopUp = () => {
                 <img src="https://homeoz.in/images/logo.png" class="w-20" />
               </div>
             </div>
+            <hr class="my-6 w-full border-(--pattern-fg)" />
             <div className="mb-4 w-72">
               <label className=" ">Name</label>
               <input
