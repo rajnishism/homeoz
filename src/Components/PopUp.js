@@ -115,20 +115,30 @@ const PopUp = () => {
     // console.log("data",data);
   };
   return (
-    <div className="mt-28">
+    <div className="mt-28 bg-gray rounded-2xl">
       <div className="flex justify-center font-bold text-3xl">
         Enter Patient Details{" "}
       </div>
       <div className="flex justify-center items-center py-10 w-screen ">
-        <div className="lg:w-2/3 w-full py-10  flex  ">
-          <div className="hidden md:flex w-1/2 items-center ">
+        <div class="flex  rounded-2xl  lg:w-2/3 w-full py-10   shadow-xl">
+          <div className="hidden md:flex w-1/2 items-center px-6  ">
             <img
               src="/images/EnterDetails.gif"
               className=""
               alt="Ni mila😢😢"
             ></img>
           </div>
-          <div className=" w-full md:w-1/2 p-6 ">
+          <div className=" w-full md:w-1/2 p-6 shadow-xl">
+               <div class="flex items-center justify-between">
+                <div class="text-2xl font-normal">
+                <h1>
+                  Application Details 
+                </h1>
+              </div>
+              <div>
+                <img src="https://homeoz.in/images/logo.png"/ class="w-20">
+              </div>
+            </div>
             <div className="mb-4 w-72">
               <label className=" ">Name</label>
               <input
