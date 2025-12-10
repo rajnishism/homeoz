@@ -136,7 +136,7 @@ const PopUp = () => {
                 </h1>
               </div>
               <div>
-                <img src="https://homeoz.in/images/logo.png"/ class="w-20">
+                <img src="https://homeoz.in/images/logo.png" class="w-20" />
               </div>
             </div>
             <div className="mb-4 w-72">
