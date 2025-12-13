@@ -128,15 +128,18 @@ const PopUp = () => {
               alt="Ni mila😢😢"
             ></img>
           </div>
-          <div className=" w-full md:w-1/2 p-10 border-2 m-4 shadow-sm rounded-xl bg-stone-50">
-               <div class="flex items-center justify-between">
-                <div class="text-2xl font-normal">
-                <h1>
-                  Application Details 
-                </h1>
+          <div
+            className=" w-full md:w-1/2 p-10  m-4 shadow-sm  "
+            style={{
+              backgroundImage: "url('./images/pageBackground.jpg')",
+            }}
+          >
+            <div class="flex items-end justify-between mb-2">
+              <div class="text-2xl font-normal">
+                <h1>Application Details</h1>
               </div>
-              <div>
-                <img src="https://homeoz.in/images/logo.png" class="w-16" />
+              <div className="bg-white rounded-full">
+                <img src="https://homeoz.in/images/logo.png" class="w-12" />
               </div>
             </div>
             <hr class="mb-4  w-full border-(--pattern-fg)" />
