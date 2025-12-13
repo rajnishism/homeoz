@@ -38,10 +38,11 @@ const Testinomials = () => {
 
   return (
     <>
-      <div></div>
-      <div className="text-center my-12">
-        <p className="text-primary font-medium">Testinomials</p>
-        <p className="font-bold text-xl">What our patient Says</p>
+      <div className="flex justify-center ">
+        <div className=" my-12 flex flex-col items-center border-b-2  border-primary pb-2 ">
+          <p className="text-primary font-medium">Testinomials</p>
+          <p className="font-bold text-xl">What our patient Says</p>
+        </div>
       </div>
 
       <div className="lg:w-2/3 shadow-lg flex mx-auto justify-center items-center flex-col md:flex-row ">

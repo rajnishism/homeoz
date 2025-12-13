@@ -18,9 +18,11 @@ const Contact = () => {
 
   return (
     <div className="mb-10">
-      <div className="text-center  ">
-        <p className="text-primary font-medium">Contact Us</p>
-        <p className="font-bold text-xl"> Feel free to Contact us</p>
+      <div className="flex justify-center ">
+        <div className="flex flex-col items-center  border-b-2  border-primary pb-2 ">
+          <p className="text-primary font-medium">Contact Us</p>
+          <p className="font-bold text-xl"> Feel free to Contact us</p>
+        </div>
       </div>
       <div className="flex items-center justify-around mt-10 ">
         <div className="flex flex-col  justify-center relative right-10">

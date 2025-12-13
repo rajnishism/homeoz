@@ -13,9 +13,14 @@ const Specialization = () => {
 
   return (
     <div className="py-4">
-      <div className="text-center">
-        <p className="text-primary font-medium">Expertise</p>
-        <p className="font-bold text-xl">Our Specialization</p>
+      <div className="flex justify-center">
+        <div
+          className="flex flex-col items-center border-b-2 border-primary pb
+         text-center"
+        >
+          <p className="text-primary font-medium">Expertise</p>
+          <p className="font-bold text-xl">Our Specialization</p>
+        </div>
       </div>
 
       <div className="flex flex-col bg-primary mt-10 p-auto">

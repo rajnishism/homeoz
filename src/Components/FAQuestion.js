@@ -13,10 +13,15 @@ const FAQuestion = () => {
   return (
     <div className="mb-10">
       <div>
-        <div className="text-center mt-10">
-          <p className="text-primary font-medium">Frequently Asked Qusetions</p>
-          <p className="font-bold text-xl"> Get Your General Answer</p>
+        <div className="flex  justify-center ">
+          <div className="border-b-2 pb-2  flex flex-col items-center borer-b-2 border-primary ">
+            <p className="text-primary font-medium">
+              Frequently Asked Qusetions
+            </p>
+            <p className="font-bold text-xl"> Get Your General Answer</p>
+          </div>
         </div>
+
         <div className="flex justify-between md:p-10 items-center flex-col md:flex-row">
           <div className="md:w-1/3 w-8/12  py-10 md:py-0">
             <img
