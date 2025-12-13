@@ -1,13 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import base from "../url"
+import base from "../url";
+
+import { downloadExcel } from "../utils/exportToExcel";
+
 const Appointment = () => {
   const [appointments, setAppointments] = useState([]);
-  const [paid, setPaid]= useState([]);
-  const [consult, setConsult]= useState([]);
-  const [med, setMed]= useState([]);
-  const [revisit, setRevisit]= useState([]);
+  const [paid, setPaid] = useState([]);
+  const [consult, setConsult] = useState([]);
+  const [med, setMed] = useState([]);
+  const [revisit, setRevisit] = useState([]);
 
   useEffect(() => {
     fetch(`${base}/appointment`)
@@ -63,6 +66,11 @@ const Appointment = () => {
         console.log(appointment);
       });
   };
+  async function exportFromApi() {
+    const res = appointments;
+    const data = res;
+    downloadExcel(data); // pass JSON directly
+  }
   return (
     <div>
       <div className="px-10 sm:flex items-center justify-between">
@@ -74,11 +82,8 @@ const Appointment = () => {
           <div className="flex items-center bg-secondary py-2 px-4 mr-2">
             <h2 className="">
               {" "}
-              <span className="font-bold text-xl"> &larr;</span> 
-              <Link to="../">
-              Back to main 
-              Website </Link>
-  
+              <span className="font-bold text-xl"> &larr;</span>
+              <Link to="../">Back to main Website </Link>
             </h2>
           </div>
 
@@ -175,6 +180,7 @@ const Appointment = () => {
             </tr>
           ))}
         </table>
+        <button onClick={() => exportFromApi()}>Download Excel</button>
       </div>
     </div>
   );
