@@ -7,38 +7,34 @@ import { useState, useEffect } from "react";
 const Testinomials = () => {
   const [testinomials, setTestinomials] = useState([]);
   const [index, setIndex] = useState(0);
-  
+
   //fetch testimonials
   useEffect(() => {
     fetch(`${base}/contents/testinomials`)
       .then((response) => response.json())
       .then((data) => {
-        setTestinomials(data|| []);
+        setTestinomials(data || []);
         setIndex(0);
-        })
-        .catch((err) => console.error("Error Fetching testimonials:", err));
-     
+      })
+      .catch((err) => console.error("Error Fetching testimonials:", err));
   }, []);
 
+  //Auto change testimonials every 2 seconds
+  useEffect(() => {
+    if (!testinomials.length) return;
 
-//Auto change testimonials every 2 seconds
-useEffect(()=>{
-      if(!testinomials.length) return;
-    
-      const intervalId = setInterval(()=> {
-        setIndex((prev)=> (prev+1)% testinomials.length);
-        }, 2000); // 2 seconds 
+    const intervalId = setInterval(() => {
+      setIndex((prev) => (prev + 1) % testinomials.length);
+    }, 2000); // 2 seconds
 
-      return () => clearInterval(intervalId); // cleanup 
+    return () => clearInterval(intervalId); // cleanup
   }, [testinomials.length]);
-
 
   // handle manual click
   const handleClick = () => {
     if (!testinomials.length) return;
     setIndex((prev) => (prev + 1) % testinomials.length);
   };
-  
 
   return (
     <>
@@ -62,19 +58,10 @@ useEffect(()=>{
               <div className="maincontent text-md font-bold">
                 {testinomials[index].testinomial}
               </div>
-              <div className="subtitle pt-4">
-                {testinomials[index].person}
-              </div>
+              <div className="subtitle pt-4">{testinomials[index].person}</div>
             </div>
           )}
         </div>
-      </div>
-
-      <div
-        className="flex justify-center pt-10 drop-shadow-lg mb-10"
-        onClick={handleClick}
-      >
-        <Button text="Next" icons="" />
       </div>
     </>
   );

@@ -35,8 +35,9 @@ const HomePage = () => {
           <FAQuestion />
           <Blogs />
           <Testinomials />
+          <div className="my-20"></div>
           <Contact />
-          
+
           <div
             className="flex justify-center py-10 bg-primary "
             onClick={handleClick}
