@@ -110,6 +110,7 @@ const PopUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     localStorage.setItem("data", JSON.stringify(data));
+    console.log("data", data);
     navigate("/checkout");
     // <Checkout data={data}/>
     // console.log("data",data);
@@ -139,7 +140,7 @@ const PopUp = () => {
                 <h1>Application Details</h1>
               </div>
               <div className="bg-white rounded-full">
-                <img src="https://homeoz.in/images/logo.png" class="w-12" />
+                <img src="/images/logo.png" class="w-12" />
               </div>
             </div>
             <hr class="mb-4  w-full border-(--pattern-fg)" />

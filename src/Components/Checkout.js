@@ -32,12 +32,13 @@ const Checkout = () => {
     });
     const resp = await res.json();
     console.log("resp", resp);
-    const order = resp.data;
-    const aid = resp.aid;
+    console.log(resp.order);
+    const order = resp.order;
+    const aid = resp.appointmentId;
     console.log("Order", order);
     const options = {
       key: "rzp_test_wnTfrZx6ogS5Ge", // Enter the Key ID generated from the Dashboard
-      amount: order.amount,
+      amount: resp.order.amount,
       currency: "INR",
       name: "Homeoz",
       description: "Appointment Booking",
