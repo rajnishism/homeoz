@@ -1,3 +1,3 @@
-const base = "http://localhost:4100";
+const base = "http://homeoz-server.vercel.app/";
 
 export default base;
