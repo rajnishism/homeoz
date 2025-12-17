@@ -14,6 +14,7 @@ export async function downloadExcel(data) {
     { header: "Phone", key: "phone", width: 20 },
     { header: "Symptoms", key: "symptoms", width: 25 },
     { header: "Payments Count", key: "paymentsCount", width: 18 },
+    { header: "Date of Booking", key: "date", width: 18 },
   ];
 
   // Add specific part of json and add rows
