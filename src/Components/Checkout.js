@@ -9,6 +9,7 @@ const Checkout = () => {
   const [fee, setFee] = useState(100000);
   const storedUser = localStorage.getItem("data");
   const data = JSON.parse(storedUser);
+  console.log("Data in checkout", data);
   // if(data){
   //     setPres(true)
   //     console.log("Ahaha");
